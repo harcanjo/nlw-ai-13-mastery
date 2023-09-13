@@ -1,4 +1,4 @@
-import { Github, FileVideo } from "lucide-react";
+import { Github, FileVideo, Upload } from "lucide-react";
 import { Button } from "./components/ui/button";
 import { Separator } from "@radix-ui/react-separator";
 import { Textarea } from "./components/ui/textarea";
@@ -62,6 +62,10 @@ export function App() {
               />
             </div>
 
+            <Button type="submit" className="w-full">
+              Carregar vídeo
+              <Upload className="w-4 h-4 ml-2" />
+            </Button>
           </form>
         </aside>
       </main>
