@@ -52,6 +52,7 @@ export function App() {
           <form className="space-y-6">
             <div className="space-y-2 ">
               <Label>Prompt</Label>
+              <br />
               <PromptSelect />
             </div>
 
