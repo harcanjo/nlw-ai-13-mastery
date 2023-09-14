@@ -6,4 +6,9 @@ Aplicação que possibilita realizar upload de videos e por meio de IA, criar au
 
 ![upload.ai frontend](./screenshots/frontend.png)
 
-42:21
+**Ideias para aprimorar**
+
+- [ ] Select para videos antigos, evitaria ter que carregar video a cada prompt selecionado.
+- [ ] Upload automatico para video no YouTube.
+- [ ] Gerar capitulos no YouTube.
+- [ ] Criar mais prompts.
