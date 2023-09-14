@@ -7,8 +7,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { Slider } from "@radix-ui/react-slider";
 import { VideoInputForm } from "./components/video-input-form";
 import { PromptSelect } from "./components/prompt-select";
+import { useState } from "react";
 
 export function App() {
+  const [temperature, setTemperature] = useState(0.5)
+  const [videoId, setVideoId] = useState<string | null>(null)
+
   function handlePromptSelected(template: string) {
     console.log(template);
 
@@ -50,13 +54,13 @@ export function App() {
           <p className="text-sm text-muted-foreground">Lembre-se: você pode utilizar a variável <code className="text-violet-400">{'{transcription}'}</code> no seu prompt para adicionar o conteúdo da transcrição do vídeo selecionado.</p>
         </div>
         <aside className="w-80 space-y-6 ">
-          <VideoInputForm />
+          <VideoInputForm onVideoUploaded={setVideoId} />
 
           <Separator />
 
           <form className="space-y-6">
             <div className="space-y-2">
-              <Label>Prompt</Label>
+              <Label>Prompt: </Label>
               <PromptSelect onPromptSelected={handlePromptSelected} />
             </div>
 
@@ -83,7 +87,8 @@ export function App() {
                 min={0}
                 max={1}
                 step={0.1}
-
+                value={[temperature]}
+                onValueChange={value => setTemperature(value[0])}
               />
               <span className="block text-xs text-muted-foreground italic leading-relaxed">
                 Valores mais altos tendem a deixar o resultado mais criativo e com possíveis erros.
