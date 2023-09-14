@@ -6,3 +6,4 @@ Aplicação que possibilita realizar upload de videos e por meio de IA, criar au
 
 ![upload.ai frontend](./screenshots/frontend.png)
 
+42:21
